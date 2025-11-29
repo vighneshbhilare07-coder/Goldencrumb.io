@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delight Cookies</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            background-color: #000000;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #FFD700; /* bright golden */
+            padding: 20px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+            color: #000000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #FFD700; /* bright golden */
+            padding: 10px;
+            gap: 25px;
+            position: relative;
+            z-index: 2;
+        }
+        nav a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #000000;
+        }
+        .section {
+            padding: 50px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+        .desc {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 10px auto 30px auto;
+            color: #ffffff;
+        }
+        .flavours {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .card {
+            background-color: rgba(255, 215, 0, 0.2); /* translucent bright golden */
+            width: 260px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            font-size: 18px;
+            animation: pop 0.8s ease;
+            color: #ffffff;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        @keyframes pop {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .btn {
+            display: inline-block;
+            background: #FFD700; /* bright golden */
+            color: black;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        footer {
+            background: #FFD700; /* bright golden */
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #000000;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .cookie-particle {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://i.imgur.com/CJ6T7qF.png');
+            background-size: cover;
+            animation: float linear infinite;
+            filter: drop-shadow(0 0 5px #FFD700);
+        }
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-10vh) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="background" id="background"></div>
+
+    <header><a href="https://example.com" style="text-decoration:none; color:#000000;">Delight Cookies 🍪</a></header>
+
+    <nav>
+        <a href="https://example.com#about">About Us</a>
+        <a href="https://example.com#flavours">Flavours</a>
+        <a href="https://example.com#pricing">Pricing</a>
+        <a href="https://example.com#contact">Contact</a>
+        <a href="https://example.com#order">Order Now</a>
+    </nav>
+
+    <section id="about" class="section">
+        <div class="title">About Us</div>
+        <div class="desc">
+            At Delight Cookies, we believe that a good cookie can brighten anyone’s day. Our journey began
+            with a simple idea: to create cookies that feel homemade, taste premium, and bring joy to both
+            kids and adults. Every batch is baked fresh daily using high-quality ingredients sourced from
+            trusted suppliers.<br><br>
+            We specialize in crafting unique flavour experiences — from fun and creative cookies for children to
+            rich, classic flavours for adults. Our dry fruit cookie, especially, is made using handpicked nuts
+            and real butter, giving it an unforgettable taste and texture.<br><br>
+            Our mission is to deliver warm, delicious cookies that remind you of home. No preservatives,
+            no shortcuts — just pure flavour, passion, and freshness.
+        </div>
+    </section>
+
+    <section id="flavours" class="section">
+        <div class="title">Our 4 Signature Flavours</div>
+        <div class="flavours">
+            <div class="card">
+                <img src="https://i.imgur.com/nLxE0Mf.png" alt="Minecraft Cookie">
+                🍪 Minecraft Cookie for Kids
+            </div>
+            <div class="card">
+                <img src="https://i.imgur.com/sY9yknw.png" alt="Vanilla Cookie">
+                🍪 Vanilla Cookie
+            </div>
+            <div class="card">
+                <img src="https://i.imgur.com/CJ6T7qF.png" alt="Chocolate Cookie">
+                🍪 Chocolate Cookie
+            </div>
+            <div class="card">
+                <img src="https://i.imgur.com/WxgVjlc.png" alt="Dry Fruit Cookie">
+                🍪 Dry Fruit Cookie (Our Speciality)
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section">
+        <div class="title">Pricing</div>
+        <div class="desc">
+            Minecraft Cookie – ₹50<br>
+            Vanilla Cookie – ₹40<br>
+            Chocolate Cookie – ₹50<br>
+            Dry Fruit Cookie – ₹70 (Special)
+        </div>
+    </section>
+
+    <section id="order" class="section">
+        <div class="title">Order Now</div>
+        <div class="desc">Click below to order on WhatsApp</div>
+        <a class="btn" href="https://wa.me/918830501799">📞 Order on WhatsApp</a>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="title">Contact Us</div>
+        <div class="desc">
+            Phone: +91 88305 01799<br>
+            Email: delightcookies@gmail.com<br>
+            Address: Mumbai, India
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Delight Cookies | Fresh. Premium. Delicious.
+    </footer>
+
+    <script>
+        const background = document.getElementById('background');
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'cookie-particle';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.animationDuration = (5 + Math.random() * 10) + 's';
+            particle.style.width = particle.style.height = (30 + Math.random() * 50) + 'px';
+            background.appendChild(particle);
+        }
+    </script>
+</body>
+</html>
